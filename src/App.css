@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+.navbar-brand{
+  font-size: 1.9rem;
+  color: #1AACAC;
+}
+a{
+  text-decoration: none  !important;
+}
+.navbar a{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.active{
+    font-weight: bold;
+    border-bottom: 1px solid #1AACAC !important;
+}
+.navbar a:hover{
+  color: #3498db;
+}
+.btn-get-started{
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border-radius: 25px;
+  border: 1px solid #1AACAC;
+  color: #1AACAC;
+  transition: all 0.3s ease-in-out;
+
+}
+.btn-get-started:hover{
+  background-color: #1AACAC;
+  color: #fff;
+}
+.brand-name{
+  font-size: 3rem;
+  color: #1AACAC;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Define the animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Apply the animation to an element */
+.header-img {
+  animation: float 3s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+}
+#header{
+  height: 95vh;
+}
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%  !important;;  
 }
 
-.App-link {
-  color: #61dafb;
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+.services-btn{
+  background-color: #1AACAC     !important;
+  border-radius: 10px !important;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border: 1px solid #1AACAC;
+  transition: all 0.3s ease-in-out;
+}
+.services-btn:hover{
+  background-color: #fff !important;
+  color: #1AACAC  !important;
+  border: 1px solid #1AACAC     !important;
+
+}
+.servicesText{
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+.servicesText::before{
+  content: '#';
+  width: 50px;
+  color: #1AACAC;
+}
+.servicesText::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8vw;
+  height: 2px;
+  background-color: #1AACAC;
+  margin-top: 3px;
+  left: 17rem;
+  top: 1.7rem;
+}
+.ContactText{
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ContactText::before{
+  content: '#';
+  width: 50px;
+  color: #0d6efd;
+}
+.ContactText::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8vw;
+  height: 2px;
+  background-color: #0d6efd;
+  margin-top: 3px;
+  right: 20rem;
+  top: 1.7rem;
+}
+
+
+
+.about-brand-name{
+  color: #4f8dc3;
+}
+.btn-get-about{
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border-radius: 25px;
+  border: 1px solid #4f8dc3;
+  color: #4f8dc3;
+  transition: all 0.3s ease-in-out;
+
+}
+.btn-get-about:hover{
+  background-color: #4f8dc3;
+  color: #fff;
+}
+.about-text{
+  font-size: 1.3rem;
+  color: rgb(101, 101, 101);
+}
+
+.form-control:focus{
+    box-shadow: none  !important;
+    outline: none !important;
+}
+textarea{
+  resize: none  !important;;  
+}
+@media (max-width : 991px) {
+      #header{
+        height: 70vh;
+      }
+      .servicesText::after{
+        width: 0vm;
+        
+      }
+      .ContactText::after{
+        width: 0vm;
+      }
+      #header .header-img{
+        text-align: center;
+      }
+
+
+}
+@media (max-width:786px) {
+  #header{
+    margin-top:20px;
+
   }
-  to {
-    transform: rotate(360deg);
+  #header h1{
+    font-size: 28px;
   }
+  #header h2{
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .navbar-brand{
+    font-size: 1.5rem;
+  }
+  .navbar a{
+    font-size: 1rem;
+  }
+  #header .header-img
+  {
+    text-align: center;
+  }
+  #header .header-img img
+  {
+    width: 60%;
+  }
+
 }
